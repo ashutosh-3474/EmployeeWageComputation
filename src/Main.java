@@ -15,17 +15,19 @@ public class Main {
 
         int curHours = 0;
 
-        if(empCheck == IS_FULL_TIME) {
-            System.out.println("Employee is Present");
-            curHours = FULL_DAY_HOURS;
+        switch (empCheck){
+            case 1:
+                System.out.println("Employee is Present");
+                curHours = FULL_DAY_HOURS;
+                break;
+            case 2:
+                System.out.println("Employee is part time");
+                curHours = PART_TIME_HOURS;
+                break;
+            default:
+                System.out.println("Employee is Absent");
+                break;
         }
-        else if(empCheck == IS_PART_TIME)
-        {
-            System.out.println("Employee is part time");
-            curHours = PART_TIME_HOURS;
-        }
-        else
-            System.out.println("Employee is Absent");
 
         int dailyWage = curHours * WAGE_PER_HOUR;
         System.out.println("current day wage = " + dailyWage);
