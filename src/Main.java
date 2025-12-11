@@ -10,14 +10,17 @@ public class Main {
         int WAGE_PER_HOUR = 20;
         int FULL_DAY_HOURS = 8;
         int PART_TIME_HOURS = 4;
-        int WORKING_DAYS = 20;
+        int MAX_WORKING_DAYS = 20;
+        int MAX_HOURS = 100;
 
         int monthlyWage = 0;
         int totalHours = 0;
+        int totalDays = 0;
 
-        for (int i=1;i<=WORKING_DAYS;i++)
+        while(totalDays < MAX_WORKING_DAYS && totalHours < MAX_HOURS)
         {
             int empCheck = (int)(Math.floor(Math.random()*10)%3);
+            totalDays++;
 
             switch (empCheck){
                 case 1:
